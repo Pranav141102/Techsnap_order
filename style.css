@@ -1,18 +1,16 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "Nunito", sans-serif;
 }
 
 body {
-  display: -ms-grid;
   display: grid;
   place-items: center;
 }
 
-.main_conatiner {
+.main_container {
   width: 100%;
   min-height: 100vh;
 }
@@ -21,11 +19,7 @@ body {
   width: 100%;
   height: 100%;
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -41,82 +35,58 @@ body {
   }
 }
 
-.order_leftSectio .order_details {
-  width: 100%;
-  height: 150px;
-}
-
-.order_leftSectio .order_details .title {
+.order_leftSectio .title {
   font-weight: 600;
   font-size: 1.6rem;
-}
-.order_leftSectio .order_details .course_details {
-  display: flex;
-  align-items: center;
   margin-bottom: 10px;
 }
 
-.order_leftSectio .order_details .course_details img {
+.order_leftSectio .course_details {
+  display: flex;
+  align-items: center;
+  margin-top: -10px;
+}
+
+.order_leftSectio .course_details img {
   width: 90px;
   object-fit: contain;
 }
 
-.order_leftSectio .order_details .course_details .descprition {
+.order_leftSectio .course_details .descprition {
   height: 100%;
 }
 
-.order_leftSectio .order_details .course_details .descprition .name {
+.order_leftSectio .course_details .descprition .name {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 15px;
 }
 
-.order_leftSectio
-  .order_details
-  .course_details
-  .descprition
-  .course_descprition {
+.order_leftSectio .course_details .course_descprition {
   display: flex;
   align-items: center;
   width: 60%;
 }
 
-.order_leftSectio
-  .order_details
-  .course_details
-  .descprition
-  .course_descprition
-  .item {
+.order_leftSectio .course_details .course_descprition .item {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.order_leftSectio
-  .order_details
-  .course_details
-  .descprition
-  .course_descprition
-  .item
-  img {
+.order_leftSectio .course_details .course_descprition .item img {
   width: 15px;
   margin: 0;
 }
 
-.order_leftSectio
-  .order_details
-  .course_details
-  .descprition
-  .course_descprition
-  .item
-  p {
+.order_leftSectio .course_details .course_descprition .item p {
   font-size: 0.6rem;
   margin: 0 10px;
-  white-space: nowrap;
 }
+
 .order_leftSectio .payment_details {
   width: 100%;
-  height: 200px;
+  height: 150px;
 }
 
 .order_leftSectio .payment_details .title {
@@ -132,16 +102,11 @@ body {
   background-color: #cc00ff;
   color: #fff;
   font-weight: 500;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0 10px;
+  transition: height 0.5s ease, opacity 0.5s ease, overflow 0.5s ease;
 }
 
 .order_leftSectio .payment_bill .title {
@@ -169,11 +134,7 @@ body {
 }
 
 .order_leftSectio .payment_bill .bill_section .bill_item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   height: 40px;
 }
@@ -189,12 +150,7 @@ body {
   font-weight: 500;
 }
 
-.order_leftSectio
-  .payment_bill
-  .bill_section
-  .bill_item
-  .bill_item_name
-  #offer1 {
+.order_leftSectio .payment_bill .bill_section .bill_item .bill_item_name #offer1 {
   position: absolute;
   right: 20%;
   background-color: #f2ed70;
@@ -206,7 +162,6 @@ body {
 
 .order_leftSectio .button {
   width: 100%;
-  display: -ms-grid;
   display: grid;
   place-items: center;
 }
@@ -230,26 +185,17 @@ body {
   position: relative;
   margin-bottom: 15px;
   width: 60%;
-  -webkit-box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
     rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
     rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 .select .selectBtn {
-  background: var(--bg1);
   padding: 10px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   border-radius: 3px;
   width: 100%;
   cursor: pointer;
   position: relative;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   background: #fff;
 }
@@ -261,11 +207,9 @@ body {
   right: 15px;
   width: 6px;
   height: 6px;
-  -webkit-transform: translateY(-50%) rotate(45deg);
   transform: translateY(-50%) rotate(45deg);
   border-right: 2px solid #666;
   border-bottom: 2px solid #666;
-  -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 
@@ -274,7 +218,6 @@ body {
 }
 
 .select .selectBtn.toggle:after {
-  -webkit-transform: translateY(-50%) rotate(-135deg);
   transform: translateY(-50%) rotate(-135deg);
 }
 
@@ -284,24 +227,18 @@ body {
   width: 100%;
   border-radius: 0 0 3px 3px;
   overflow: hidden;
-  background: var(--bg1);
+  background: #fff;
   border-top: 1px solid #eee;
   z-index: 1;
-  background: #fff;
-  -webkit-transform: scale(1, 0);
   transform: scale(1, 0);
-  -webkit-transform-origin: top center;
   transform-origin: top center;
   visibility: hidden;
-  -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
-  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
 
 .select .selectDropdown .option {
   padding: 10px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   cursor: pointer;
 }
@@ -312,7 +249,6 @@ body {
 
 .select .selectDropdown.toggle {
   visibility: visible;
-  -webkit-transform: scale(1, 1);
   transform: scale(1, 1);
 }
 
@@ -320,29 +256,15 @@ body {
   width: 40%;
   min-height: 100vh;
   background-color: #111563;
-  position: sticky; /* changes*/
-  top: 0; /* changes*/
-  bottom: 0; /* changes*/
+  position: sticky;
+  top: 0;
+  bottom: 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .order_rightSection {
     display: none;
   }
-}
-
-.order_rightSection .close {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  padding: 15px;
 }
 
 .order_rightSection .close p {
@@ -364,26 +286,19 @@ body {
 
 .order_rightSection .image {
   width: 100%;
-  display: -ms-grid;
   display: grid;
   place-items: center;
 }
 
 .order_rightSection .image img {
-  -o-object-fit: contain;
   object-fit: contain;
   width: 350px;
 }
 
 .order_rightSection .coins {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
   margin: 10px 0;
 }
@@ -395,11 +310,7 @@ body {
 }
 
 .order_rightSection .coins .coins_item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   color: #fff;
   font-size: 1.5rem;
@@ -408,14 +319,12 @@ body {
 
 .order_rightSection .coins .coins_item img {
   width: 50px;
-  -o-object-fit: contain;
   object-fit: contain;
 }
 
 .button_redeem {
   margin-bottom: 10px;
   width: 100%;
-  display: -ms-grid;
   display: grid;
   place-items: center;
 }
@@ -440,16 +349,20 @@ body {
   padding: 10px;
   margin: 20px;
 }
+
 .name {
   font-weight: bold;
   font-size: 1.2em;
 }
+
 .course_descprition {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
 }
+
 .item {
   text-align: center;
 }
+
 /*# sourceMappingURL=style.css.map */

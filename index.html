@@ -18,12 +18,52 @@
 	<div class="main_conatiner">
 		<section class="order_section">
 			<div class="order_leftSectio">
-				<div class="order_details">
+				<div class="Order1">
 					<div class="title">Order Details</div>
 					<div class="course_details">
 						<img src="/assets/course.svg" alt="course" />
 						<div class="descprition">
-							<div class="name">Introduction to Basics Of Python</div>
+							<div class="name">Basics Of Python</div>
+							<div class="course_descprition">
+								<div class="item">
+									<img src="/assets/time.svg" alt="time" />
+									<p>14 hours</p>
+								</div>
+								<div class="item">
+									<img src="/assets/book.svg" alt="time" />
+									<p>12 Lessons</p>
+								</div>
+								<div class="item">
+									<img src="/assets/coin.svg" alt="time" />
+									<p>899 XP</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="course_details">
+						<img src="/assets/course.svg" alt="course" />
+						<div class="descprition">
+							<div class="name">Advancement in Python</div>
+							<div class="course_descprition">
+								<div class="item">
+									<img src="/assets/time.svg" alt="time" />
+									<p>14 hours</p>
+								</div>
+								<div class="item">
+									<img src="/assets/book.svg" alt="time" />
+									<p>12 Lessons</p>
+								</div>
+								<div class="item">
+									<img src="/assets/coin.svg" alt="time" />
+									<p>899 XP</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="course_details">
+						<img src="/assets/course.svg" alt="course" />
+						<div class="descprition">
+							<div class="name">Web Development</div>
 							<div class="course_descprition">
 								<div class="item">
 									<img src="/assets/time.svg" alt="time" />
@@ -41,22 +81,23 @@
 						</div>
 					</div>
 				</div>
-
-				<div class="payment_details">
-					<div class="title">Payment Method</div>
-					<div class="select">
-						<div class="selectBtn" data-type="firstOption">First option</div>
-						<div class="selectDropdown">
-							<div class="option" data-type="firstOption">First option</div>
-							<div class="option" data-type="secondOption">Second option</div>
-							<div class="option" data-type="thirdOption">Third option</div>
+				<div class="Payment1">
+					<div class="payment_details">
+						<div class="title">Payment Method</div>
+						<div class="select">
+							<div class="selectBtn" data-type="firstOption">First option</div>
+							<div class="selectDropdown">
+								<div class="option" data-type="firstOption">First option</div>
+								<div class="option" data-type="secondOption">Second option</div>
+								<div class="option" data-type="thirdOption">Third option</div>
+							</div>
 						</div>
-					</div>
-					<div class="offer" id="offer">
-						<p>
-							Start your monthly PRO membership. You can cancel at any time.
-						</p>
-						<span onclick="closeOffer()">X</span>
+						<div class="offer" id="offer">
+							<p>
+								Start your monthly PRO membership. You can cancel at any time.
+							</p>
+							<span onclick="closeOffer()">X</span>
+						</div>
 					</div>
 				</div>
 				<div class="payment_bill">
@@ -147,7 +188,24 @@
 		// changes
 		function closeOffer() {
 			var offerDiv = document.getElementById('offer');
-			offerDiv.style.display = 'none';
+
+			// Get the height of the closed offer
+			var offerHeight = offerDiv.offsetHeight;
+
+			// Set the height to 0 and hide the content
+			offerDiv.style.height = '0';
+			offerDiv.style.overflow = 'hidden';
+			offerDiv.style.opacity = '0';
+
+			// Adjust the layout of the content after the offer
+			var contentAfterOffer = document.querySelector('.content-after-offer');
+			if (contentAfterOffer) {
+				contentAfterOffer.style.marginTop = '-' + offerHeight + 'px';
+			}
+
+			setTimeout(function () {
+				offerDiv.style.display = 'none';
+			}, 500); // Adjust the duration (in milliseconds) as needed
 		}
 
 	</script>
