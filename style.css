@@ -109,6 +109,14 @@ body {
   transition: height 0.5s ease, opacity 0.5s ease, overflow 0.5s ease;
 }
 
+@media (max-width: 800px) {
+  .order_leftSectio .payment_details .offer {
+    width: 100%; 
+    height: 40x;
+    padding: 0 5px; 
+  }
+}
+
 .order_leftSectio .payment_bill .title {
   font-size: 1.5rem;
   font-weight: 600;
@@ -122,6 +130,13 @@ body {
 .order_leftSectio .payment_bill .bill_section p {
   font-size: 0.7rem;
   margin-top: 10px;
+}
+
+@media (max-width: 800px) {
+  .order_leftSectio .payment_bill .bill_section p {
+    font-size: 0.6rem; 
+    margin-top: 8px;
+  }
 }
 
 .order_leftSectio .payment_bill .bill_section::before {
@@ -154,6 +169,14 @@ body {
   position: absolute;
   right: 20%;
   background-color: #f2ed70;
+}
+
+@media (max-width: 800px) {
+  .order_leftSectio .payment_bill .bill_section .bill_item .bill_item_name #offer1 {
+    position: static;  
+    right: auto;  
+    background-color: #f2ed70; 
+  }
 }
 
 .order_leftSectio .payment_bill .bill_section .bill_item .bill_item_price {
@@ -345,7 +368,6 @@ body {
 }
 
 .descprition {
-  border: 1px solid #ccc;
   padding: 10px;
   margin: 20px;
 }
