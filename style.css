@@ -7,7 +7,6 @@
 
 body {
   display: grid;
-  place-items: center;
 }
 
 .main_container {
@@ -108,6 +107,16 @@ body {
   padding: 0 10px;
   transition: height 0.5s ease, opacity 0.5s ease, overflow 0.5s ease;
 }
+
+#offer span {
+  display: none;
+  cursor: pointer;
+}
+
+#offer:hover span {
+  display: block;
+}
+
 
 @media (max-width: 800px) {
   .order_leftSectio .payment_details .offer {
@@ -276,17 +285,34 @@ body {
 }
 
 .order_rightSection {
+  flex: 1;
   width: 40%;
   min-height: 100vh;
   background-color: #111563;
   position: sticky;
   top: 0;
   bottom: 0;
+  z-index: 999;
 }
 
 @media (max-width: 1024px) {
   .order_rightSection {
     display: none;
+  }
+}
+
+/* New media query for the sticky behavior */
+@media (min-width: 1025px) {
+  .order_rightSection {
+    position: sticky;
+    width: 40%;
+  }
+}
+
+@media (min-width: 1750px) {
+  .order_rightSection {
+    position: sticky;
+    width: 100%;
   }
 }
 
