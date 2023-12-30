@@ -116,6 +116,11 @@ body {
   display: block;
 }
 
+@media only screen and (max-width: 767px) {
+  #offer span {
+    display: block;
+  }
+}
 
 @media (max-width: 800px) {
   .order_leftSectio .payment_bill .offer {
