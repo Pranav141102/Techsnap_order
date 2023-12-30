@@ -85,7 +85,6 @@ body {
 
 .order_leftSectio .payment_details {
   width: 100%;
-  height: 150px;
 }
 
 .order_leftSectio .payment_details .title {
@@ -95,7 +94,7 @@ body {
   margin-top: 15px;
 }
 
-.order_leftSectio .payment_details .offer {
+.order_leftSectio .payment_bill .offer {
   width: 80%;
   height: 40px;
   background-color: #cc00ff;
@@ -119,7 +118,7 @@ body {
 
 
 @media (max-width: 800px) {
-  .order_leftSectio .payment_details .offer {
+  .order_leftSectio .payment_bill .offer {
     width: 100%; 
     height: 40x;
     padding: 0 5px; 
