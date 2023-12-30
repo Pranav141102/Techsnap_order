@@ -342,7 +342,7 @@ body {
   }
 }
 
-@media (min-width: 1450px) {
+@media (min-width: 1500px) {
   .parent-container {
     position: relative;
   }
@@ -364,7 +364,6 @@ body {
 
 .order_rightSection .title {
   width: 100%;
-  padding: 20px;
 }
 
 .order_rightSection .title h1 {
