@@ -344,7 +344,7 @@ body {
 
 @media (min-width: 1500px) {
   .parent-container {
-    position: relative;
+    position: relative; 
   }
 
   .order_rightSection {
@@ -352,7 +352,7 @@ body {
     width: 100%;
     max-width: 600px; /* Adjust the max-width value as needed */
     right: 0; /* Stick to the right */
-    min-height: 100vh;
+    
   }
 }
 
